@@ -1,0 +1,14 @@
+.ck_btn_primary{
+  color: rgb(255, 255, 255);
+  background-color: #FF6600;
+  border-radius: 30px;
+  text-transform: uppercase;
+  box-shadow: #FF6600 0px 0px 5px 0px;
+  outline: none;
+  border-color: #FF6600;
+  font-weight: bold;
+  padding: 15px 30px;
+}
+@media (min-width: 768px) {
+  padding: 15px 50px;
+}

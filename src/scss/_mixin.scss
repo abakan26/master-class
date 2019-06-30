@@ -1,0 +1,28 @@
+@mixin fc{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin fc100{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin radial_gradient{
+	background-image: radial-gradient(rgb(76, 73, 73) 0%, rgb(245, 245, 245) 100%);
+}
+
+@mixin line($width, $weight, $color){
+	width: $width;
+	border-top: $weight solid $color;
+	border-bottom: $weight solid $color;
+	border-radius: 0px;
+}
+
+@mixin old_center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
