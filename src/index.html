@@ -4,7 +4,44 @@
     <meta charset="UTF-8">
     <title>Syneff</title>
 </head>
-<body>
+<body style="background:#6495ed">
+<div class="container">
+    <h1 class="text-white text-center">Электронная регистрация</h1>
+    <h3 class="text-white">на бесплатный мастер-класс в IT-школе SYNEFF</h3>
+    <form action="form.php" method="post" class="form-group">
+        <h4>Сведения о родителях</h4>
+        <input class="form-control mb-4" type="text" id="name" name="parent_name" placeholder="имя" required>
+        <input class="form-control mb-4" type="phone" id="phone" name="phone" placeholder="контактный телефон" required>
+        <input class="form-control mb-4" type="email" id="email" name="email" placeholder="email" required>
+
+
+        <label for="child_count">Количество детей в семье</label>
+
+       <input class="form-control col-2" type="number" id="child_count" name="child_count" required>
+
+        <label for="canal">Как Вы узнали о нас?</label>
+        <select name="canal" id="canal" class="form-control mb-2" required>
+            <option value="">Выбрать из списка</option>
+            <option value="What’s app">What’s app</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Google поиск">Google поиск</option>
+        </select>
+        <h4>Сведения о ребенке</h4>
+        <input class="form-control mb-4" type="text" id="child_name" name="child_name" placeholder="фамилия" required>
+        <input required class="form-control mb-4" type="text" id="child__second_name" name="child__second_name" placeholder="имя">
+
+        <div class="mt-4 form-inline">
+            <label for="canal" class="text-center">Дата <br>рождения</label>
+            <input required class="form-control col-2 mr-2 ml-2" type="text" id="day" placeholder="ДД" name="day">
+            <input required class="form-control col-2 mr-2" type="text" id="month" placeholder="ММ" name="month">
+            <input required class="form-control col-3" type="text" id="year" placeholder="ГГГГ" name="year">
+        </div>
+
+        <button disabled class="mt-4 ml-auto mr-auto d-block btn btn-primary bg-success" type="submit" id="submit">Зарегестрироваться</button>
+    </form>
+</div>
+
 
 </body>
 </html>
