@@ -17,4 +17,18 @@
 .ck_input:focus{
   outline: 2px #FF6600 solid;
 }
-
+.form-input{
+  height: 60px;
+  font-size: 20px;
+}
+.error_message{
+  text-align: center;
+  color: red;
+  opacity: 0;
+}
+.show{
+  opacity: 1;
+}
+.form_label{
+  margin-left: auto;
+}

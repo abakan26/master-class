@@ -6,40 +6,51 @@
 </head>
 <body style="background:#6495ed">
 <div class="container">
-    <h1 class="text-white text-center">Электронная регистрация</h1>
-    <h3 class="text-white">на бесплатный мастер-класс в IT-школе SYNEFF</h3>
-    <form action="form.php" method="post" class="form-group">
-        <h4>Сведения о родителях</h4>
-        <input class="form-control mb-4" type="text" id="name" name="parent_name" placeholder="имя" required>
-        <input class="form-control mb-4" type="phone" id="phone" name="phone" placeholder="контактный телефон" required>
-        <input class="form-control mb-4" type="email" id="email" name="email" placeholder="email" required>
+    <h1 class="text-white text-center mt-4">Электронная регистрация</h1>
+    <h3 class="text-white text-center mb-5">на бесплатный мастер-класс в IT-школе SYNEFF</h3>
+    <div class="row justify-content-center">
+        <form action="form.php" method="post" class="form-group">
+            <h4 class="text-center mb-4">Сведения о родителях</h4>
+            <p class="ml-5 mb-0 font-weight-bold form_label"><label for="name">имя</label></p>
+            <input class="form-control form-input col-10 col-md-4  ml-auto mr-auto" type="text" id="name" name="parent_name" placeholder="имя" required>
+            <div class="error_message mb-3 " id="name_error">проверьте введенные данные</div>
+            <p class="ml-5 mb-0 font-weight-bold"><label for="phone">номер телефона</label></p>
+            <input class="form-control form-input col-10 col-md-4  ml-auto mr-auto" type="phone" id="phone" name="phone" placeholder="контактный телефон" required>
+            <div class="error_message mb-3" id="phone_error">проверьте введенные данные</div>
+            <p class="ml-5 mb-0 font-weight-bold"><label for="email">электронная почта</label></p>
+            <input class="form-control form-input col-10 col-md-4  ml-auto mr-auto" type="email" id="email" name="email" placeholder="email" required>
+            <div class="error_message mb-5" id="email_error">проверьте введенные данные</div>
 
+            <p class="text-center mb-0"><label  for="child_count">Количество детей в семье</label></p>
 
-        <label for="child_count">Количество детей в семье</label>
+            <input class="form-control ml-auto mr-auto col-2" type="number" id="child_count" name="child_count" required>
+            <div class="error_message">проверьте введенные данные</div>
+            <p class="text-center mb-0"><label  for="canal">Как Вы узнали о нас?</label></p>
+            <select name="canal" id="canal" class="col-10 form-control ml-auto mr-auto mb-2 col-md-4" required>
+                <option value="">Выбрать из списка</option>
+                <option value="What’s app">What’s app</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Google поиск">Google поиск</option>
+            </select>
+            <h4 class="text-center mt-5">Сведения о ребенке</h4>
+            <p class="ml-5 mb-0 font-weight-bold"><label for="child_name">Фамилия ребенка</label></p>
+            <input class="col-10 form-input  form-control ml-auto mr-auto col-md-4" type="text" id="child_name" name="child_name" placeholder="фамилия" required>
+            <div class="error_message mb-4" id="child_secondname_error">проверьте введенные данные</div>
+            <p class="ml-5 mb-0 font-weight-bold"><label for="child__second_name">Имя ребенка</label></p>
+            <input required class="col-10 form-input form-control ml-auto mr-auto  col-md-4" type="text" id="child__second_name" name="child__second_name" placeholder="имя">
+            <div class="error_message mb-4" id="child_name_error">проверьте введенные данные</div>
+            <div class="mt-4 form-inline justify-content-center">
+                <label for="canal" class="text-center">Дата <br>рождения</label>
+                <input required class="form-control col-2 col-md-1 mr-2 ml-2" type="text" id="day" placeholder="ДД" name="day">
+                <input required class="form-control col-2 col-md-1 mr-2" type="text" id="month" placeholder="ММ" name="month">
+                <input required class="form-control col-3" col-md-1 type="text" id="year" placeholder="ГГГГ" name="year">
+            </div>
+            <div class="error_message mb-3" id="submit_error">проверьте введенные данные</div>
+            <button class="mt-4 ml-auto mr-auto d-block btn btn-primary bg-success" type="submit" id="submit">Зарегестрироваться</button>
+        </form>
+    </div>
 
-       <input class="form-control col-2" type="number" id="child_count" name="child_count" required>
-
-        <label for="canal">Как Вы узнали о нас?</label>
-        <select name="canal" id="canal" class="form-control mb-2" required>
-            <option value="">Выбрать из списка</option>
-            <option value="What’s app">What’s app</option>
-            <option value="Instagram">Instagram</option>
-            <option value="Facebook">Facebook</option>
-            <option value="Google поиск">Google поиск</option>
-        </select>
-        <h4>Сведения о ребенке</h4>
-        <input class="form-control mb-4" type="text" id="child_name" name="child_name" placeholder="фамилия" required>
-        <input required class="form-control mb-4" type="text" id="child__second_name" name="child__second_name" placeholder="имя">
-
-        <div class="mt-4 form-inline">
-            <label for="canal" class="text-center">Дата <br>рождения</label>
-            <input required class="form-control col-2 mr-2 ml-2" type="text" id="day" placeholder="ДД" name="day">
-            <input required class="form-control col-2 mr-2" type="text" id="month" placeholder="ММ" name="month">
-            <input required class="form-control col-3" type="text" id="year" placeholder="ГГГГ" name="year">
-        </div>
-
-        <button disabled class="mt-4 ml-auto mr-auto d-block btn btn-primary bg-success" type="submit" id="submit">Зарегестрироваться</button>
-    </form>
 </div>
 
 
