@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Syneff</title>
 </head>
-<body style="background:#6495ed">
+<body style="background:#6495ed;">
 <style>
     .error{
         text-align: center;
@@ -16,7 +16,7 @@
     <h1 class="text-white text-center mt-4">Электронная регистрация</h1>
     <h3 class="text-white text-center mb-5">на бесплатный мастер-класс в IT-школе SYNEFF</h3>
     <div class="row justify-content-center">
-        <form action="form.php" method="post" class="form-group" id="form">
+        <form action="form.php" method="POST" class="form-group" id="my-form">
             <h4 class="text-center mb-4">Сведения о родителях</h4>
             <p class="ml-5 mb-0 font-weight-bold form_label"><label for="name">имя</label></p>
             <input class="form-control form-input col-10 col-md-4  ml-auto mr-auto" type="text" id="name" name="parent_name" placeholder="имя" required>
@@ -49,16 +49,20 @@
             <div class="error_message mb-4" id="child_name_error">проверьте введенные данные</div>
             <div class="mt-4 form-inline justify-content-center">
                 <label for="canal" class="text-center">Дата <br>рождения</label>
-                <input autofocus required class="form-control col-2 col-md-1 mr-2 ml-2" type="text" id="day" placeholder="ДД" name="day">
-                <input autofocus required class="form-control col-2 col-md-1 mr-2" type="text" id="month" placeholder="ММ" name="month">
-                <input autofocus required class="form-control col-3" col-md-1 type="text" id="year" placeholder="ГГГГ" name="year">
+                <input autofocus required class="form-control col-2 col-md-1 mr-2 ml-2" type="number" id="day" placeholder="ДД" name="day">
+                <input autofocus required class="form-control col-2 col-md-1 mr-2" type="number" id="month" placeholder="ММ" name="month">
+                <input autofocus required class="form-control col-3" col-md-1 type="number" id="year" placeholder="ГГГГ" name="year">
             </div>
             <div class="error_message mb-3" id="submit_error">проверьте введенные данные</div>
-            <button class="mt-4 ml-auto mr-auto d-block btn btn-primary bg-success" type="submit" id="submit">Зарегестрироваться</button>
+            <input class="mt-4 ml-auto mr-auto d-block btn btn-primary bg-success" type="submit" name="my-submit" id="my-submit" value="Зарегистрироваться">
         </form>
     </div>
 
 </div>
 
+
+<div id="loader" style="display:none;height: 100%; overflow: hidden;position: fixed; background: #000; opacity: 0.4;top: 0;left: 0;width: 100%;justify-content: center;align-items: center">
+    <img src="images/ajax-loader.gif" alt="">
+</div>
 </body>
 </html>

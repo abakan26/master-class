@@ -2,14 +2,17 @@ import 'jquery';
 import validate from 'jquery-validation';
 import Inputmask from "inputmask";
 
-
+const day = document.getElementById("day");
+const year = document.getElementById("year");
+const month = document.getElementById("month");
+const phone = document.getElementById("phone");
 const mask_year = new Inputmask("2099");
 mask_year.mask(year);
 const mask_day = new Inputmask("99");
 mask_day.mask(day);
 const mask_month = new Inputmask("99");
 mask_month.mask(month);
-const phone = document.getElementById("phone");
+
 var mask = new Inputmask("+7 999 999-99-99");
 mask.mask(phone);
 
@@ -22,13 +25,13 @@ $.validator.addMethod(
     "Проверьте правильность введенных данных"
 );
 
-$('#form').validate({
+$('#my-form').validate({
     rules: {
         parent_name: {
             required: true,
-            regex: "^[а-яА-Яa-zA-ZёЁ]*$",
+            regex: "^[а-яА-Яa-zA-ZёЁ\\s]*$",
             minlength: 3,
-            maxlength:15
+            maxlength:30
         },
         phone: {
             required: true,
@@ -116,5 +119,9 @@ $('#form').validate({
             required: "Это поля обязательно для заполнения",
             number:"Заполните поле"
         }
+    },
+    submitHandler:function (form) {
+        $('#loader').css('display','flex');
+        form.submit()
     }
 });
