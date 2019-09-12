@@ -13,6 +13,7 @@
     "email-validator": "^2.0.4",
     "inputmask": "^4.0.8",
     "jquery": "^3.4.1",
+    "jquery-validation": "^1.19.1",
     "popper.js": "^1.15.0"
   },
   "devDependencies": {
